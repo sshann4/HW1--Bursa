@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BURSA</title>
+    <!-- <script src="jquery-3.2.1.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="bursa.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="graphBox">
+      <div data-js="1"></div>
+      <div data-js="2"></div>
+      <div data-js="3"></div>
+      <div data-js="4"></div>
+      <div data-js="5"></div>
+      <div data-js="6"></div>
+      <div data-js="7"></div>
+      <div data-js="8"></div>
+      <div data-js="9"></div>
+      <div data-js="10"></div>
+      <div data-js="11"></div>
+      <div data-js="12"></div>
+      <div data-js="13"></div>
+      <div data-js="14"></div>
+      <div data-js="15"></div>
+      <div data-js="16"></div>
+      <div data-js="17"></div>
+      <div data-js="18"></div>
+      <div data-js="19"></div>
+      <div data-js="20"></div>
+      <div data-js="21"></div>
+      <div data-js="22"></div>
+      <div data-js="23"></div>
+      <div data-js="24"></div>
+      <div data-js="25"></div>
+      <div data-js="26"></div>
+      <div data-js="27"></div>
+      <div data-js="28"></div>
+      <div data-js="29"></div>
+      <div data-js="30"></div>
+      <div data-js="31"></div>
+      <div data-js="32"></div>
+      <div data-js="33"></div>
+      <div data-js="34"></div>
+      <div data-js="35"></div>
+      <div data-js="36"></div>
+      <div data-js="37"></div>
+      <div data-js="38"></div>
+      <div data-js="39"></div>
+      <div data-js="40"></div>
+      <div data-js="41"></div>
+      <div data-js="42"></div>
+      <div data-js="43"></div>
+      <div data-js="44"></div>
+      <div data-js="45"></div>
+      <div data-js="46"></div>
+      <div data-js="47"></div>
+      <div data-js="48"></div>
+      <div data-js="49"></div>
+      <div data-js="50"></div>
+      <div data-js="51"></div>
+      <div data-js="52"></div>
+      <div data-js="53"></div>
+      <div data-js="54"></div>
+      <div data-js="55"></div>
+      <div data-js="56"></div>
+      <div data-js="57"></div>
+      <div data-js="58"></div>
+      <div data-js="59"></div>
+      <div data-js="60"></div>
+      <div data-js="61"></div>
+      <div data-js="62"></div>
+      <div data-js="63"></div>
+      <div data-js="64"></div>
+      <div data-js="65"></div>
+      <div data-js="66"></div>
+      <div data-js="67"></div>
+      <div data-js="68"></div>
+      <div data-js="69"></div>
+      <div data-js="70"></div>
+      <div data-js="71"></div>
+      <div data-js="72"></div>
+      <div data-js="73"></div>
+      <div data-js="74"></div>
+      <div data-js="75"></div>
+      <div data-js="76"></div>
+      <div data-js="77"></div>
+      <div data-js="78"></div>
+      <div data-js="79"></div>
+      <div data-js="80"></div>
+      <div data-js="81"></div>
+      <div data-js="82"></div>
+      <div data-js="83"></div>
+      <div data-js="84"></div>
+      <div data-js="85"></div>
+      <div data-js="86"></div>
+      <div data-js="87"></div>
+      <div data-js="88"></div>
+      <div data-js="89"></div>
+      <div data-js="90"></div>
+      <div data-js="91"></div>
+      <div data-js="92"></div>
+      <div data-js="93"></div>
+      <div data-js="94"></div>
+      <div data-js="95"></div>
+      <div data-js="96"></div>
+      <div data-js="97"></div>
+      <div data-js="98"></div>
+      <div data-js="99"></div>
+      <div data-js="100"></div>
+    </div>
+
+    <script type="text/javascript">
+
+        function makeCol (i) {
+            console.log(i);
+            fetch('https://secure-castle-8699.herokuapp.com/')
+            .then((res) => {return res.json()})
+            .then((data) => {              
+              if (i<101){
+                console.log(i+' '+data.num);
+                $('[data-js='+i+']').css('height', data.num * 10);
+                setTimeout(makeCol, 500, i + 1)
+              }
+              else{
+                return;
+              }
+            });
+        };
+
+        makeCol(1);
+    </script>
+
+  </body>
+</html>
