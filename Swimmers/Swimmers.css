@@ -1,0 +1,39 @@
+body {
+    background-color: #DDE7EC;
+    align-items: center;
+}
+.pool{
+  display: inline-block;
+  border-style: double;
+  border-color: blue;
+  height: 500px;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-right: 40px;
+  margin-left: 40px;
+  vertical-align: middle;
+  position: relative;
+}
+.gun{
+  display: inline-block;
+  background-color: grey;
+  margin: auto;
+  width: 10%;
+  height: 90px;
+  overflow: hidden;
+  vertical-align: middle
+}
+.gunPic{
+  width: 100%;
+  height: auto;
+}
+.swimmer{
+  position: absolute;
+  display: inline-block;
+  height: 15%;
+  width: auto;
+  margin-right: 3% ;
+  margin-left: 3%;
+  bottom: 0;
+}

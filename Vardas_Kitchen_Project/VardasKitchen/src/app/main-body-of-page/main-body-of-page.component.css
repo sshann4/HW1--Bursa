@@ -1,0 +1,11 @@
+.columns {
+  display: flex;
+}
+
+.side {
+  flex: 1;
+}
+
+.most-recommended {
+  flex: 1;
+}

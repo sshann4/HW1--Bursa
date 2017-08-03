@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swimmers</title>
+  <link rel="stylesheet" type="text/css" href="Swimmers.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="pool">
+      <img src="swimmer.png" alt="swimmer1" class="swimmer" data-js="swimmer left">
+      <img src="swimmer.png" alt="swimmer1" class="swimmer" data-js="swimmer center">
+      <img src="swimmer.png" alt="swimmer1" class="swimmer" data-js="swimmer right">
+    </div>
+
+    <div class="gun">
+      <img src="gun.jpg" alt="Starting Gun" class="gunPic" data-js="gun">
+    </div>
+
+
+<script>
+  $('[data-js=gun]').click(function(){
+    movingSwimmers();
+  })
+
+  var movingSwimmers = function(){
+    var swimmer left = document.querySelector('[data-js="swimmer left]');
+    var swimmer center = document.querySelector('[data-js="swimmer center]');
+    var swimmer right = document.querySelector('[data-js="swimmer right]');
+
+    var leftTime = Math.random()*10;
+    var centertime = Math.random()*10;
+    var rightTime = Math.random()*10;
+
+    swimmerleft
+
+  }
+</script>
+</body>
+</html>
